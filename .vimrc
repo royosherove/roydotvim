@@ -1,11 +1,20 @@
+let mapleader = ','
+
 call plug#begin()
-" you will need to :
-" brew tap caskroom/fonts   
-" brew cask install font-hack-nerd-font
-" or look here:
-" https://github.com/ryanoasis/nerd-fonts#option-1-install-script
+    " for dev icons you will need to :
+    " brew tap caskroom/fonts   
+    " brew cask install font-hack-nerd-font
+    " or look here:
+    " https://github.com/ryanoasis/nerd-fonts#option-1-install-script
 	Plug 'ryanoasis/vim-devicons'
 
+    Plug 'pangloss/vim-javascript'
+    Plug 'mxw/vim-jsx'
+
+"    Plug 'Valloric/YouCompleteMe'
+"    Plug 'sirver/ultisnips'
+    
+    Plug 'tpope/vim-fugitive'
 	Plug 'scrooloose/nerdtree'
 	Plug 'tpope/vim-fugitive'
 	Plug 'scrooloose/syntastic'
@@ -20,11 +29,8 @@ call plug#begin()
 	Plug 'sjl/gundo.vim'
 call plug#end()
 
-
 set nocompatible
-
 set nowrap
-set title
 set laststatus=2
 set visualbell
 set number
@@ -59,7 +65,6 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 "nnoremap j gj
 "nnoremap k gk
 
-let mapleader = ','
 
 nnoremap <C-n> :NERDTreeToggle<cr>
 "Edit special files
