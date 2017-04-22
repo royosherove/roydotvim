@@ -20,8 +20,11 @@ call plug#begin()
 	Plug 'sjl/gundo.vim'
 call plug#end()
 
+
 set nocompatible
+
 set nowrap
+set title
 set laststatus=2
 set visualbell
 set number
