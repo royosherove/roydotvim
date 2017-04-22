@@ -7,6 +7,7 @@ call plug#begin()
     " or look here:
     " https://github.com/ryanoasis/nerd-fonts#option-1-install-script
 	Plug 'ryanoasis/vim-devicons'
+    Plug 'tpope/vim-sensible'
 
     Plug 'pangloss/vim-javascript'
     Plug 'mxw/vim-jsx'
@@ -21,17 +22,18 @@ call plug#begin()
 "File Explorers
 	Plug 'scrooloose/nerdtree'
     Plug 'tpope/vim-vinegar'
-
-	Plug 'tpope/vim-fugitive'
-	Plug 'scrooloose/syntastic'
 	Plug 'kien/ctrlp.vim'
+	Plug 'rking/ag.vim'
+    Plug 'easymotion/vim-easymotion'
+
+	Plug 'scrooloose/syntastic'
 	Plug 'altercation/vim-colors-solarized'
 	Plug 'bling/vim-airline'
+
 	Plug 'tpope/vim-rails'
 	Plug 'vim-ruby/vim-ruby'
 	Plug 'tpope/vim-endwise'
 	Plug 'raimondi/delimitmate'
-	Plug 'rking/ag.vim'
 	Plug 'sjl/gundo.vim'
 call plug#end()
 
@@ -55,6 +57,7 @@ set showmatch           " highlight matching [{()}]
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <esc><esc> :nohlsearch<CR>
 
 set foldenable          " enable folding
 set foldlevelstart=10   " open most folds by default
@@ -73,6 +76,10 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 "nnoremap j gj
 "nnoremap k gk
 
+
+map mm <Plug>(easymotion-prefix)
+map mmm <Plug>(easymotion-bd-w)
+map MMM <Plug>(easymotion-bd-b)
 
 nnoremap <C-n> :NERDTreeToggle<cr>
 "Edit special files
