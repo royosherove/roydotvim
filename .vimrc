@@ -14,7 +14,10 @@ call plug#begin()
 "    Plug 'Valloric/YouCompleteMe'
 "    Plug 'sirver/ultisnips'
     
+"Git
     Plug 'tpope/vim-fugitive'
+    Plug 'airblade/vim-gitgutter'
+
 	Plug 'scrooloose/nerdtree'
 	Plug 'tpope/vim-fugitive'
 	Plug 'scrooloose/syntastic'
@@ -30,6 +33,7 @@ call plug#begin()
 call plug#end()
 
 set nocompatible
+set updatetime=250
 set nowrap
 set laststatus=2
 set visualbell
