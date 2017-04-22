@@ -18,7 +18,10 @@ call plug#begin()
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
 
+"File Explorers
 	Plug 'scrooloose/nerdtree'
+    Plug 'tpope/vim-vinegar'
+
 	Plug 'tpope/vim-fugitive'
 	Plug 'scrooloose/syntastic'
 	Plug 'kien/ctrlp.vim'
@@ -60,6 +63,7 @@ nnoremap <space> za
 set foldmethod=indent   " fold based on indent level
 
 " CtrlP settings
+nnoremap <leader><leader> :CtrlP<cr>
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
