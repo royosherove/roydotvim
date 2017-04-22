@@ -23,6 +23,7 @@ call plug#end()
 set nocompatible
 set nowrap
 set laststatus=2
+set visualbell
 set number
 set tabstop=4       " number of visual spaces per TAB
 set softtabstop=4   " number of spaces in tab when editing
@@ -51,13 +52,24 @@ let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
-nnoremap j gj
-nnoremap k gk
+" move even on wrapped lines
+"nnoremap j gj
+"nnoremap k gk
 
 let mapleader = ','
 
 nnoremap <C-n> :NERDTreeToggle<cr>
+"Edit special files
+"source currne tfile in shell
+nnoremap <leader>sf !source %<cr> 
+
+"vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>wq :wq<cr>:source $MYVIMRC<cr>!cp $MYVIMRC $HOME/.vim<cr>
+
+"zshrc
+nnoremap <leader>ez :vsplit $HOME/.zshrc<cr>
+nnoremap <leader>zwq :wq<cr>!source $HOME/.zshrc<cr>
+
 nnoremap <leader>u :GundoToggle<CR>
 
