@@ -20,6 +20,7 @@ Plug 'airblade/vim-gitgutter'
 
 "Completions
 Plug 'ervandew/supertab'
+Plug 'alvan/vim-closetag'
 
 "File Explorers
 Plug 'scrooloose/nerdtree'
@@ -44,6 +45,7 @@ Plug 'bling/vim-airline'
 call plug#end()
 
 let g:jsx_ext_required = 0
+let g:closetag_filenames = "*.xml,*.js,*.html,*.xhtml,*.phtml"
 
 set nocompatible
 set updatetime=250
