@@ -103,6 +103,14 @@ nnoremap <leader>sf !source %<cr>
 " Ctrl-E to switch between 2 last buffers
 nnoremap <C-E> :b#<CR>
 
+nnoremap <C-j> i<cr><esc>
+nnoremap <S-j> i<cr><esc>
+
+"auto format file
+nnoremap <leader>f ggVG=<C-o><C-o>
+
+inoremap <leader>m <esc>:w<cr>
+nnoremap <leader>m :w<cr>
 "vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>wq :wq<cr>:source $MYVIMRC<cr>!cp $MYVIMRC $HOME/.vim<cr>
