@@ -103,8 +103,8 @@ nnoremap <leader>sf !source %<cr>
 " Ctrl-E to switch between 2 last buffers
 nnoremap <C-E> :b#<CR>
 
-nnoremap <C-j> i<cr><esc>
-nnoremap <S-j> i<cr><esc>
+"move text after cursor to new line
+nnoremap <C-j> i<cr><esc>w
 
 "auto format file
 nnoremap <leader>f ggVG=<C-o><C-o>
