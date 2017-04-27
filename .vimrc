@@ -53,8 +53,8 @@ set nowrap
 set laststatus=2
 set visualbell
 set number
-set tabstop=4       " number of visual spaces per TAB
-set softtabstop=4   " number of spaces in tab when editing
+set tabstop=2       " number of visual spaces per TAB
+set softtabstop=2   " number of spaces in tab when editing
 set expandtab       " tabs are spaces
 set showcmd             " show command in bottom bar
 set cursorline          " highlight current line
@@ -99,6 +99,9 @@ map MMM <Plug>(easymotion-bd-b)
 "Edit special files
 "source currne tfile in shell
 nnoremap <leader>sf !source %<cr> 
+
+" Ctrl-E to switch between 2 last buffers
+nnoremap <C-E> :b#<CR>
 
 "vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
