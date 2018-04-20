@@ -121,3 +121,4 @@ nnoremap <leader>zwq :wq<cr>!source $HOME/.zshrc<cr>
 
 nnoremap <leader>u :GundoToggle<CR>
 
+colorscheme slate
