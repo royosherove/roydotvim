@@ -8,10 +8,16 @@ call plug#begin()
 " https://github.com/ryanoasis/nerd-fonts#option-1-install-script
 Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-sensible'
+Plug 'leafgarland/typescript-vim'
+Plug 'vim-scripts/mru.vim'
+
+
 
 Plug 'mxw/vim-jsx'
 
-"    Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
+Plug 'othree/javascript-libraries-syntax.vim'
+
 "    Plug 'sirver/ultisnips'
 
 "Git
@@ -55,9 +61,11 @@ set visualbell
 set number
 set tabstop=2       " number of visual spaces per TAB
 set softtabstop=2   " number of spaces in tab when editing
+set shiftwidth=2
 set expandtab       " tabs are spaces
 set showcmd             " show command in bottom bar
 set cursorline          " highlight current line
+set scrolloff=7        " Always make top or bottom X lines visible"
 filetype indent on      " load filetype-specific indent files
 filetype plugin on
 syntax enable
@@ -92,6 +100,7 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 nnoremap <c-n> :NERDTreeToggle<cr>
 let NERDTreeIgnore=['node_modules']
 
+nnoremap <leader>mm :Mru<cr>
 map mm <Plug>(easymotion-prefix)
 map mmm <Plug>(easymotion-bd-w)
 map MMM <Plug>(easymotion-bd-b)
